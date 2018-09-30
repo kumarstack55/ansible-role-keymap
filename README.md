@@ -24,7 +24,9 @@ Example Playbook
 
     - hosts: servers
       roles:
-         - { role: username.rolename, keymap_vc_keymap: jp }
+        - role: kumarstack55.ansible_role_keymap
+          vars:
+            keymap_vc_keymap: jp
 
 License
 -------
