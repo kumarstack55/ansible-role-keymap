@@ -1,0 +1,11 @@
+galaxy_info:
+  author: kumarstack55
+  description: keymap
+  license: MIT
+  min_ansible_version: 2.2
+  platforms:
+   - name: EL
+     versions:
+     - 7
+  galaxy_tags: [ keymap ]
+dependencies: []

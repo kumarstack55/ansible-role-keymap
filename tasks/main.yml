@@ -1,0 +1,14 @@
+---
+- name: Get keymap setting
+  check_mode: no
+  shell: |-
+    localectl \
+    | grep -P '^\s+VC Keymap:' \
+    | grep -Po '(?<=: ).+'
+  register: keymap_result
+  changed_when: false
+
+- name: Ensure keymap setting
+  become: yes
+  shell: localectl set-keymap "{{ keymap_vc_keymap }}"
+  when: keymap_result.stdout != keymap_vc_keymap
