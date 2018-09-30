@@ -12,7 +12,7 @@ Requirements
 Role Variables
 --------------
 
-keymap_vc_keymap: us
+* keymap_vc_keymap (default: us)
 
 Dependencies
 ------------
